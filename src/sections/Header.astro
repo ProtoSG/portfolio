@@ -1,0 +1,37 @@
+---
+import ItemHeader from "../components/ItemHeader.astro"
+
+interface link {
+  href: string
+  title: string
+}
+
+const links: link[] = [
+  {
+    href: "#",
+    title: "About"
+  },
+  {
+    href: "#",
+    title: "Skills"
+  },
+  {
+    href: "#",
+    title: "Projects"
+  },
+  {
+    href: "#",
+    title: "Contact"
+  },
+]
+
+---
+<header class="flex justify-center items-center h-24">
+  <ul class="flex gap-6 text-xl">
+    {
+      links.map(link => (
+        <ItemHeader href={link.link} title={link.title}/>
+      ))
+    }
+  </ul>
+</header>

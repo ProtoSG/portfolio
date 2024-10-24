@@ -1,0 +1,63 @@
+---
+import Card from "../components/Card.astro"
+import { HtmlIcon, CssIcon, JavaScriptIcon, TypeScriptIcon, ReactIcon, TailwindIcon, AstroIcon, NodeJsIcon, MySqlIcon, GolangIcon } from "../icons"
+
+const skills = [
+  {
+    icon: HtmlIcon,
+    name: "HTML"
+  },
+  {
+    icon: CssIcon,
+    name: "CSS"
+  },
+  {
+    icon: JavaScriptIcon,
+    name: "JavaScript"
+  },
+  {
+    icon: TypeScriptIcon,
+    name: "TypeScript"
+  },
+  {
+    icon: ReactIcon,
+    name: "React"
+  },
+  {
+    icon: TailwindIcon,
+    name: "Tailwind"
+  },
+  {
+    icon: AstroIcon,
+    name: "Astro"
+  },
+  {
+    icon: NodeJsIcon,
+    name: "NodeJs"
+  },
+  {
+    icon: MySqlIcon,
+    name: "MySql"
+  },
+  {
+    icon: GolangIcon,
+    name: "Golang"
+  },
+]
+---
+<section class="flex flex-col items-center container">
+  <div class="text-center">
+    <small>Explore My</small>
+    <h2 class="text-4xl font-semibold">Skills</h2>
+  </div>
+  <div class="flex gap-8 items-center flex-wrap justify-center">
+    {
+    skills.map((skill, index) => (
+      <Card key={index}>
+      <skill.icon  size={32}/>
+        <span class="font-semibold">{skill.name}</span>
+      </Card>
+    ))
+    }
+  </div>
+</section>
