@@ -1,3 +1,13 @@
-<div class="p-6 border-[1px] border-zinc-300 rounded-2xl w-36 h-36 flex flex-col items-center justify-center gap-5">
+---
+interface Props {
+  link: string
+}
+  
+const { link } = Astro.props
+---
+
+<div 
+  data-aos="fade-up" 
+  class="size-32 flex items-center justify-center hover:drop-shadow-2xl">
   <slot />
 </div>

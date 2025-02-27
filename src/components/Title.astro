@@ -1,0 +1,13 @@
+---
+interface Props {
+  tag: string
+  title: string
+}
+
+const {tag, title} = Astro.props
+---
+
+<div class="text-center">
+  <small>{tag}</small>
+  <h2 class="text-4xl font-semibold">{title}</h2>
+</div>

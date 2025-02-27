@@ -1,0 +1,16 @@
+---
+interface Props {
+  link: string
+  target?: boolean
+}
+
+const { link, target } = Astro.props
+---
+
+<a 
+  target={target ? "_blank" : ""}
+  href={link}
+  class="border-[1px] border-zinc-300 rounded-full w-32 h-12 flex items-center justify-center hover:bg-zinc-300 transition-colors text-sm font-medium text-pretty hover:text-black"
+  >
+  <slot />
+</a>
