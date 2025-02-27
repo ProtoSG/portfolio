@@ -1,0 +1,28 @@
+---
+const currentYear = new Date().getFullYear()
+---
+
+<footer
+    class="flex-col gap-4 px-4 md:px-12 lg:px-0 tracking-wide text-pretty m-4 mt-16 mx-auto container mb-10 flex md:justify-center lg:max-w-6xl md:max-w-2x"
+>
+  <div
+    class="lg:w-4/6 w-full mx-auto md:flex md:items-center md:justify-between py-4"
+  >
+    <span class="text-sm sm:text-center"
+      >© {currentYear}
+      Casi todos los derechos reservados
+    </span>
+    <ul
+      class="flex flex-wrap items-center mt-3 text-sm font-medium "
+    >
+      <li>
+        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+      </li>
+      <li>
+        <a id="contacto" href="mailto:diegoalbertosalzar177@gmail.com" class="hover:underline"
+          >Contacto</a
+        >
+      </li>
+    </ul>
+  </div>
+</footer>

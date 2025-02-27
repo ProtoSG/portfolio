@@ -1,0 +1,56 @@
+---
+import { Section, Title, ItemProject } from "../components"
+import { ReactIcon, TailwindIcon } from "../icons"
+
+const TAGS = {
+  NEXT: {
+    name: "React",
+    class: "bg-[#3B8899] text-white",
+    icon: ReactIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind",
+    class: "bg-[#003159] text-white",
+    icon: TailwindIcon,
+  },
+}
+
+const PROJECTS = [
+  {
+    title: "Personal Finance Dashboard",
+    description: "Personal Finance Dashboard es una aplicación web que permite a los usuarios rastrear sus ingresos y gastos de manera visual e intuitiva. La aplicación incluye gráficos interactivos, un formulario para agregar transacciones, y un resumen financiero general. El objetivo es proporcionar una herramienta sencilla y efectiva para gestionar tus finanzas personales.",
+    link: "https://protosg.github.io/personalFinanceDashboard/",
+    github: "https://github.com/ProtoSG/personalFinanceDashboard",
+    image: "/projects/PersonalFinanceDashboard.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+  {
+    title: "Cryptocurrency Tracker",
+    description: "Cryptocurrency Tracker es una aplicación web diseñada para rastrear en tiempo real los precios y tendencias de diversas criptomonedas. Proporciona una interfaz amigable y dinámica, utilizando tecnologías modernas como React, TypeScript, y Vite para un rendimiento óptimo.",
+    link: "https://protosg.github.io/cryptocurrency-tracker/",
+    github: "https://github.com/ProtoSG/cryptocurrency-tracker",
+    image: "/projects/cryptocurrent-tracker.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+  {
+    title: "Personal Finance Dashboard",
+    description: "Personal Finance Dashboard es una aplicación web que permite a los usuarios rastrear sus ingresos y gastos de manera visual e intuitiva. La aplicación incluye gráficos interactivos, un formulario para agregar transacciones, y un resumen financiero general. El objetivo es proporcionar una herramienta sencilla y efectiva para gestionar tus finanzas personales.",
+    link: "https://protosg.github.io/personalFinanceDashboard/",
+    github: "https://github.com/ProtoSG/personalFinanceDashboard",
+    image: "/projects/PersonalFinanceDashboard.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  }
+]
+---
+
+<Section id="proyectos">
+  <Title tag="Explorar Mis Recientes" title="Proyectos" />
+  <div class="relative wrap overflow-hidden px-2 md:p-10  h-full w-full">
+    <div class="hidden md:block border-2-2 absolute border-opacity-20 border-gray-700 h-full border lg:left-1/2"></div>
+    {
+      PROJECTS.map((project, index) => (
+      <ItemProject left={index % 2 === 0} index={index + 1} project={project} />
+      ))
+    }
+    </div>
+</Section>

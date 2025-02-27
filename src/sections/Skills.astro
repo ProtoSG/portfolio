@@ -1,63 +1,61 @@
 ---
 import Card from "../components/Card.astro"
-import { HtmlIcon, CssIcon, JavaScriptIcon, TypeScriptIcon, ReactIcon, TailwindIcon, AstroIcon, NodeJsIcon, MySqlIcon, GolangIcon } from "../icons"
+import { TypeScriptIcon, ReactIcon, TailwindIcon, AstroIcon, NodeJsIcon, MySqlIcon, GolangIcon } from "../icons"
+import { Section, Title } from "../components"
 
 const skills = [
   {
-    icon: HtmlIcon,
-    name: "HTML"
-  },
-  {
-    icon: CssIcon,
-    name: "CSS"
-  },
-  {
-    icon: JavaScriptIcon,
-    name: "JavaScript"
-  },
-  {
     icon: TypeScriptIcon,
-    name: "TypeScript"
+    name: "TypeScript",
+    color: "#2F74C0"
   },
   {
     icon: ReactIcon,
-    name: "React"
+    name: "React",
+    color: "#00D1F7"
   },
   {
     icon: TailwindIcon,
-    name: "Tailwind"
+    name: "Tailwind",
+    color: "#00D1F7"
   },
   {
     icon: AstroIcon,
-    name: "Astro"
+    name: "Astro",
+    color: "#FF5F27"
   },
   {
     icon: NodeJsIcon,
-    name: "NodeJs"
+    name: "NodeJs",
+    color: "#509941"
   },
   {
     icon: MySqlIcon,
-    name: "MySql"
+    name: "MySql",
+    color: "#00718B"
   },
   {
     icon: GolangIcon,
-    name: "Golang"
+    name: "Golang",
+    color: "#0091D5"
   },
 ]
+
 ---
-<section class="flex flex-col items-center container">
-  <div class="text-center">
-    <small>Explore My</small>
-    <h2 class="text-4xl font-semibold">Skills</h2>
+
+<Section id="skills">
+  <Title tag="Explora Mis" title="Skills" />
+  <div class="flex gap-8 w-full items-center flex-wrap justify-center ">
+    {skills.map((skill) => (
+    <Card link="/book">
+      <div class="border hover:size-32 border-zinc-300 size-28 rounded-2xl flex flex-col items-center justify-center gap-5  shadow-lg hover:shadow-2xl bg-white  transition-all duration-500  group">
+        <div class="transition-all duration-500 group-hover:text-[color:var(--icon-color)] group-hover:scale-125"
+             style={`--icon-color: ${skill.color}`}>
+          <skill.icon size={32} />
+        </div>
+        <span class="font-semibold text-black group-hover:scale-125 transition-transform duration-500">{skill.name}</span>
+      </div>
+    </Card>
+    ))}
   </div>
-  <div class="flex gap-8 items-center flex-wrap justify-center">
-    {
-    skills.map((skill, index) => (
-      <Card key={index}>
-      <skill.icon  size={32}/>
-        <span class="font-semibold">{skill.name}</span>
-      </Card>
-    ))
-    }
-  </div>
-</section>
+</Section>
