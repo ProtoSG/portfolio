@@ -1,9 +1,9 @@
 ---
 import { Section, Title, ItemProject } from "../components"
-import { ReactIcon, TailwindIcon } from "../icons"
+import { ReactIcon, TailwindIcon, TypeScriptIcon, NodeJsIcon } from "../icons"
 
 const TAGS = {
-  NEXT: {
+  REACT: {
     name: "React",
     class: "bg-[#3B8899] text-white",
     icon: ReactIcon,
@@ -12,6 +12,16 @@ const TAGS = {
     name: "Tailwind",
     class: "bg-[#003159] text-white",
     icon: TailwindIcon,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#2F74C0] text-white",
+    icon: TypeScriptIcon,
+  },
+  NODEJS: {
+    name: "NodeJS",
+    class: "bg-[#509941] text-white",
+    icon: NodeJsIcon,
   },
 }
 
@@ -22,7 +32,7 @@ const PROJECTS = [
     link: "https://protosg.github.io/personalFinanceDashboard/",
     github: "https://github.com/ProtoSG/personalFinanceDashboard",
     image: "/projects/PersonalFinanceDashboard.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.REACT, TAGS.TAILWIND],
   },
   {
     title: "Cryptocurrency Tracker",
@@ -30,15 +40,15 @@ const PROJECTS = [
     link: "https://protosg.github.io/cryptocurrency-tracker/",
     github: "https://github.com/ProtoSG/cryptocurrency-tracker",
     image: "/projects/cryptocurrent-tracker.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.REACT, TAGS.TAILWIND],
   },
   {
-    title: "Personal Finance Dashboard",
-    description: "Personal Finance Dashboard es una aplicación web que permite a los usuarios rastrear sus ingresos y gastos de manera visual e intuitiva. La aplicación incluye gráficos interactivos, un formulario para agregar transacciones, y un resumen financiero general. El objetivo es proporcionar una herramienta sencilla y efectiva para gestionar tus finanzas personales.",
-    link: "https://protosg.github.io/personalFinanceDashboard/",
-    github: "https://github.com/ProtoSG/personalFinanceDashboard",
-    image: "/projects/PersonalFinanceDashboard.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    title: "Roots Market",
+    description: "Roots Market es una tienda de productos artesanales peruanos, donde puedes encontrar una amplia gama de productos, además puedes registrarte como artesano y vender tus productos. El frontend fue desarrollado con React, TypeScript, Tailwind CSS, mientras que el backend fue desarrollado con NodeJS, Express y MySQL.",
+    link: "https://roots-market.vercel.app",
+    github: "https://github.com/ProtoSG/roots-market",
+    image: "/projects/rootsMarket.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.NODEJS],
   }
 ]
 ---
