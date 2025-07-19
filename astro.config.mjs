@@ -8,5 +8,5 @@ export default defineConfig({
   integrations: [tailwind()],
   site: "https://protosg.github.io",
   output: "static",
-  base: "/portfolio/",
+  base: "/portfolio",
 });
